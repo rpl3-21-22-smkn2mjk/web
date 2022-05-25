@@ -1,0 +1,68 @@
+.event{
+    width: 100%;
+    height: 600px;
+    background-color: var(--color1);
+    position: relative;
+    padding-top: 100px;
+    overflow: hidden;
+}
+.event img.bg {
+    opacity: 0%;
+    top:0;bottom:0;
+    right:0;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    user-select: none;
+    transition: .5s;
+}
+.event img.bg.aktif{
+    opacity: 1;
+}
+.event::before{
+    top:0;bottom:0;left:0;right:0;width: 100%;height: 100%;
+    position: absolute;
+    background-image: linear-gradient(90deg, var(--color1) 0%, var(--color1) 27%, rgba(210, 210, 210, 0) 100%);
+    content: "";
+    z-index: 2;
+}
+.event .imgS img{
+    opacity: 80%;
+    width: 150px;
+    height: 150px;
+    border:2px solid white;
+    transition: .5s;
+}
+.event .imgS img.aktif{
+    position: relative;
+    z-index: 3;
+    opacity: 1;
+    transform: scale(1.2);
+    border:2px solid var(--color1);
+    transition: .5s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.105);
+}
+
+@media only screen and (max-width: 600px) {
+    .event .Ma34{
+        justify-content: center !important;
+        align-items: flex-end !important;
+        text-align: center;
+    }
+    .event img.bg{
+        top:0;bottom:0;left:0;right:0;width: 100%;height: 100%;
+    }
+    .event{
+        padding: 0px;
+        padding-bottom: 60px;
+        background-color: white;
+        height: 550px;
+    }
+    .event::before{
+        background-image: linear-gradient(0deg, var(--color1) 0%, var(--color1) 30%, rgba(210, 210, 210, 0) 100%);
+    }
+    .xmc33{
+        padding: 30px;
+    }
+}
